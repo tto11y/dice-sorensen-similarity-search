@@ -1,0 +1,11 @@
+ pre-commit:
+   parallel: false
+   jobs:
+     - name: Tidying dependencies
+       run: make tidy
+
+     - name: Formatting files
+       run: make fmt
+
+     - name: Starting test execution"
+       run: make test

@@ -1,0 +1,11 @@
+services:
+  postgres:
+    container_name: dice-sorensen-search-db
+    image: postgres:14-alpine
+    ports:
+      - "44688:5432"
+    command: ["postgres", "-c", "log_statement=all"]
+    environment:
+      - POSTGRES_USER=dice
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=dicesorensensearch_db
